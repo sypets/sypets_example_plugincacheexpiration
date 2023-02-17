@@ -1,0 +1,20 @@
+mod.wizards.newContentElement.wizardItems {
+   plugins {
+      elements {
+         PluginCache {
+           # FontawesomeIconProvider is no longer available in TYPO3 v12, deactivate for now
+           # iconIdentifier = plugin-icon
+           title = Test cache expiration
+           description =
+           tt_content_defValues {
+               CType = list
+               # plugin signature = (lowercased extension key without _) + '_' + (lowercased plugin name)
+               list_type = sypetsexampleplugincacheexpiration_cache
+           }
+         }
+      }
+
+      show := addToList(PluginCache)
+   }
+
+}

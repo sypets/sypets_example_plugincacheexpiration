@@ -1,0 +1,32 @@
+{
+	"name": "sypets/sypets-example-plugincacheexpiration",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 example for testing a core patch to modify page cache expiration time",
+	"autoload": {
+		"psr-4": {
+			"Sypets\\SypetsExamplePlugincacheexpiration\\": "Classes/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Sybille Peters",
+			"email": "sypets@gmx.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^12.3.0 || dev-main"
+	},
+	"license": "GPL-2.0-or-later",
+	"config": {
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": ".Build/Web",
+			"extension-key": "sypets_example_plugincacheexpiration"
+		}
+	}
+}
