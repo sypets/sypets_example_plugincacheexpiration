@@ -10,8 +10,8 @@ class CacheController extends ActionController
     public function showAction(): ResponseInterface
     {
         $interval = 10;
-        if (isset($GLOBALS['TSFE']) && method_exists($GLOBALS['TSFE'], 'setPageCacheMinimalExpirationTimestamp')) {
-            $GLOBALS['TSFE']->setPageCacheMinimalExpirationTimestamp(time() + $interval);
+        if (isset($GLOBALS['TSFE']) && method_exists($GLOBALS['TSFE'], 'setMinimalCacheExpires')) {
+            $GLOBALS['TSFE']->setMinimalCacheExpires(time() + $interval);
             $this->view->assign('hint', sprintf('Cache will expire in %d seconds', $interval));
         } else {
             $this->view->assign('hint', 'Could not change expiration time');
