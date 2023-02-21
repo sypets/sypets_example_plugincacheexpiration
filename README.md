@@ -2,11 +2,9 @@ Example for testing a core patch, see TYPO3 Issue:
 
 * https://forge.typo3.org/issues/92535
 
-And corresponding patch:
+!!! This extension will only work with the corresponding patch applied:
 
 * https://review.typo3.org/c/Packages/TYPO3.CMS/+/77894
-
-!!! This extension will only work with the corresponding patch applied.
 
 ## Supported versions
 
