@@ -7,3 +7,10 @@ services:
   Sypets\SypetsExamplePlugincacheexpiration\:
     resource: '../Classes/*'
 
+  Sypets\SypetsExamplePlugincacheexpiration\EventListener\PageCacheEventListener:
+    public: true
+    tags:
+      - name: event.listener
+        identifier: 'pageCacheEventListener'
+        event: TYPO3\CMS\Frontend\Event\SetPageCacheEvent
+
